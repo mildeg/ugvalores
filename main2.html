@@ -1691,12 +1691,20 @@
                                                             <div class="is-flex">
 
                                                                 <div class="input-wp-vue">
-                                                                    <label :for="'Relacion#'+personNr">Relacion</label>
+                                                                    <label :for="'Relacion#'+personNr">Accionistas/Apoderados</label>
                                                                     <select required="1"
                                                                             v-model="data[personNr].Relacion"
                                                                             :id="'Relacion#'+personNr">
                                                                         <option></option>
                                                                         <option>Condominio</option>
+                                                                        <option>Accionista</option>
+                                                                        <option>Presidente</option>
+                                                                        <option>Vicepresidente</option>
+                                                                        <option>Director</option>
+                                                                        <option>Socio</option>
+                                                                        <option>Representante legal</option>
+                                                                        <option>Apoderado</option>
+                                                                        <option>Socio gerente</option>
                                                                     </select>
                                                                 </div>
 
@@ -1708,16 +1716,25 @@
                                                             <h1> Datos principales </h1>
                                                             <div class="is-flex">
                                                                 <div class="input-wp-vue">
-                                                                    <label :for="'Nombre#'+personNr">Nombre</label>
+                                                                    <label :for="'Nombre#'+personNr">Denominacion</label>
                                                                     <input required="1" v-model="data[personNr].Nombre"
                                                                            type="text"
                                                                            :id="'Nombre#'+personNr">
                                                                 </div>
                                                                 <div class="input-wp-vue">
-                                                                    <label :for="'Apellido#'+personNr">Apellido</label>
-                                                                    <input required="1"
-                                                                           v-model="data[personNr].Apellido" type="text"
-                                                                           :id="'Apellido#'+personNr">
+                                                                    <label :for="'TipoID#'+personNr">Tipo organización</label>
+                                                                    <select required="1"
+                                                                            v-model="data[personNr].TipoOrganizacion"
+                                                                            :id="'TipoOrganizacion#'+personNr">
+                                                                        <option></option>
+                                                                        <option>Agrupación</option>
+                                                                        <option>Asociación</option>
+                                                                        <option>Cooperativa</option>
+                                                                        <option>Sociedad anónima</option>
+                                                                        <option>Sociedad sin fines de lucro</option>
+                                                                        <option>SRL</option>
+                                                                        <option>SAS</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                             <div class="is-flex">
@@ -1839,10 +1856,9 @@
                                                                     <label :for="'ActaConstitucion#'+personNr">N° Acta
                                                                         de consitucion</label>
                                                                     <input
-                                                                            :id="'ActaConstitucion#'+personNr"
-                                                                            check-type="nacimiento" required="1"
+                                                                            :id="'ActaConstitucion#'+personNr" required="1"
                                                                             v-model="data[personNr].ActaConstitucion"
-                                                                            type="date">
+                                                                            type="text">
                                                                 </div>
                                                             </div>
                                                             <div class="is-flex">
